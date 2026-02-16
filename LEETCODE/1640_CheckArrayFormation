@@ -1,0 +1,22 @@
+class Solution {
+    public boolean canFormArray(int[] arr, int[][] pieces) {
+        int i = 0;
+        while (i < arr.length) {
+            boolean found = false;
+            for (int x = 0; x < pieces.length; x++) {
+                if (pieces[x][0] == arr[i]) {
+                    found = true;
+                    for (int j = 0; j < pieces[x].length; j++) {
+                        if (i + j >= arr.length || arr[i + j] != pieces[x][j]) {
+                            return false;
+                        }
+                    }
+                    i += pieces[x].length;
+                    break;
+                }
+            }
+            if (!found) return false;
+        }
+        return true;
+    }
+}
