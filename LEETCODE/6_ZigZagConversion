@@ -1,7 +1,7 @@
 class Solution {
-    public String convert(String s, int numRows) {
-       if (numRows == 1 || numRows >= s.length()) {
-            return s;
+    public String convert(String str, int numRows) {
+       if (numRows == 1 || numRows >= str.length()) {
+            return str;
         }
 
         int idx = 0, d = 1;
