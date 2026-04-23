@@ -11,14 +11,14 @@ class Solution {
        int total=0;
        int prev=0;
        for(int i=s.length()-1;i>=0;i--){
-        int curr=map.get(s.charAt(i));
-       if(curr<prev){
-        total-=curr;
+        int current=map.get(s.charAt(i));
+       if(current<prev){
+        total-=current;
        }
        else{
-        total+=curr;
+        total+=current;
        }
-       prev=curr;
+       prev=current;
        }
        return total;
     }
