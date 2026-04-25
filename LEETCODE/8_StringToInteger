@@ -31,15 +31,15 @@ class Solution {
         }
         
         // Step 3: Read digits and convert
-        long res = 0;
+        long result = 0;
         while (i < n && Character.isDigit(s.charAt(i))) {
             int digit = s.charAt(i) - '0';
-            res = res * 10 + digit;
+            result = result * 10 + digit;
             
-            if (sign * res <= INT_MIN) {
+            if (sign * result <= INT_MIN) {
                 return INT_MIN;
             }
-            if (sign * res >= INT_MAX) {
+            if (sign * result >= INT_MAX) {
                 return INT_MAX;
             }
             
@@ -47,6 +47,6 @@ class Solution {
         }
         
         // Step 4: Apply sign and return
-        return (int)(res * sign);        
+        return (int)(result * sign);        
     }
 }
